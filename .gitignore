@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.local
+.vercel/
+*.tsbuildinfo
+data/site-content.json
+data/*.tmp
+public/uploads/

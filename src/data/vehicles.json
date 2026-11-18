@@ -1,0 +1,122 @@
+[
+  {
+    "id": "mercedes-amg-gt",
+    "brand": "Mercedes-Benz",
+    "name": "AMG GT",
+    "category": "Sport",
+    "price": 120,
+    "image": "/images/mercedes.webp",
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "seats": 2,
+    "tag": "L’élégance à l’état pur",
+    "featured": true,
+    "description": "Des lignes sculptées et une présence unique. Un coupé de caractère pour transformer chaque déplacement en un moment privilégié.",
+    "features": [
+      "Climatisation automatique",
+      "Apple CarPlay",
+      "Caméra de recul",
+      "Intérieur cuir"
+    ]
+  },
+  {
+    "id": "porsche-panamera",
+    "brand": "Porsche",
+    "name": "Panamera Turbo",
+    "category": "Berline",
+    "price": 290,
+    "image": "/images/porsche.webp",
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "seats": 4,
+    "tag": "Une icône. Votre moment.",
+    "featured": true,
+    "description": "Une silhouette intemporelle et le plaisir de la route à chaque virage. Une expérience singulière pour les passionnés de belles mécaniques.",
+    "features": [
+      "Sièges sport",
+      "Navigation GPS",
+      "Palettes au volant",
+      "Toit panoramique"
+    ]
+  },
+  {
+    "id": "honda-cr-v",
+    "brand": "Honda",
+    "name": "CR-V",
+    "category": "SUV",
+    "price": 195,
+    "image": "/images/range.webp",
+    "fuel": "Diesel",
+    "transmission": "Automatique",
+    "seats": 5,
+    "tag": "Voyez la route en grand",
+    "featured": true,
+    "description": "Une présence affirmée, un espace généreux et un confort remarquable. Prenez de la hauteur et profitez du voyage, à votre rythme.",
+    "features": [
+      "Transmission intégrale",
+      "Caméra 360°",
+      "Intérieur cuir",
+      "Grand coffre"
+    ]
+  },
+  {
+    "id": "bmw-m5",
+    "brand": "BMW",
+    "name": "M5",
+    "category": "Berline",
+    "price": 110,
+    "image": "/images/bmw.webp",
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "seats": 5,
+    "tag": "Le plaisir au quotidien",
+    "featured": false,
+    "description": "L’équilibre entre confort et dynamisme. Une berline pensée pour accompagner vos escapades comme vos rendez-vous professionnels.",
+    "features": [
+      "Navigation GPS",
+      "Bluetooth",
+      "Climatisation",
+      "Régulateur de vitesse"
+    ]
+  },
+  {
+    "id": "audi-rs6",
+    "brand": "Audi",
+    "name": "RS6 Avant",
+    "category": "Break",
+    "price": 130,
+    "image": "/images/audi.webp",
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "seats": 5,
+    "tag": "Le sens du détail",
+    "featured": false,
+    "description": "Le caractère sportif et la liberté d’un break. Un intérieur soigné et une silhouette affirmée pour voyager avec distinction.",
+    "features": [
+      "Cockpit numérique",
+      "Apple CarPlay",
+      "Aide au stationnement",
+      "Phares LED"
+    ]
+  },
+  {
+    "id": "bmw-m4",
+    "brand": "BMW",
+    "name": "M4 Coupé",
+    "category": "Sport",
+    "price": 65,
+    "image": "/images/mini.webp",
+    "fuel": "Essence",
+    "transmission": "Automatique",
+    "seats": 4,
+    "tag": "Le caractère à chaque virage",
+    "featured": false,
+    "description": "Une silhouette affirmée et un esprit sportif. Explorez de nouveaux horizons dans un coupé qui ne passe pas inaperçu.",
+    "features": [
+      "Bluetooth",
+      "Climatisation",
+      "Capteurs de stationnement",
+      "USB"
+    ]
+  }
+]

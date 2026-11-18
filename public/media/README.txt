@@ -1,0 +1,1 @@
+Placez les fichiers reels de votre agence ici : MP4/WebM pour les videos, JPG/WebP/PNG pour les photos. Ils apparaissent automatiquement dans la galerie, avec lecture directe sur le site. Relancez le build apres ajout pour Vercel. Aucun fichier video Facebook accessible sans connexion na pu etre importe.
