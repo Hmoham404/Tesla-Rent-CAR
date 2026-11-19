@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { createHmac, timingSafeEqual, randomUUID } from "node:crypto";
-import {readContent,writeContent,uploadImage} from '../server/content-store';
+import {readContent,writeContent,uploadImage} from './content-store';
 import { rentalDays, rentalPeriodDays, quote } from "../src/lib/booking.mjs";
 const equal = (a: string, b: string) => {
   const aa = Buffer.from(a),
@@ -110,7 +110,7 @@ export default async function handler(
     const db = async (query: string, init: RequestInit = {}) => {
       if (!url || !key)
         throw new Error(
-          "Supabase non activé : configurez la clé serveur et exécutez supabase/schema.sql.",
+          "Supabase non activé : configurez VITE_SUPABASE_URL et la clé serveur, puis exécutez supabase/SETUP.sql.",
         );
       const response = await fetch(`${url}/rest/v1/${query}`, {
         ...init,

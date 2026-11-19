@@ -43,6 +43,9 @@ export async function api(path: string, data?: unknown, method = "POST") {
     headers: { "Content-Type": "application/json" },
     ...(data ? { body: JSON.stringify(data) } : {}),
   });
+  const type = response.headers.get("content-type") || "";
+  if (!type.includes("application/json"))
+    throw new Error("L’API du site ne répond pas. Vérifiez le déploiement des fonctions dans Vercel.");
   const result = await response.json();
   if (!response.ok)
     throw new Error(result.error || "Le service est indisponible. Réessayez.");

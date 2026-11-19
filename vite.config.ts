@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { loadEnv } from "vite";
-import handler from "./api/[...route]";
+import handler from "./server/api-handler";
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 export default defineConfig(({ mode }) => ({

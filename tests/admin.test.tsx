@@ -6,10 +6,10 @@ import App from '../src/App';
 import {defaultContent} from '../src/lib/content-model';
 let saved=structuredClone(defaultContent);
 beforeEach(()=>{localStorage.clear();saved=structuredClone(defaultContent);vi.stubGlobal('fetch',vi.fn(async (url:string,options?:RequestInit)=>{
- if(url==='/api/content')return new Response(JSON.stringify({content:saved}));
- if(url==='/api/admin/content'){saved=JSON.parse(options!.body as string);return new Response(JSON.stringify({ok:true}));}
- if(url==='/api/admin/session')return new Response(JSON.stringify({ok:true}));
- return new Response('{}');
+ if(url==='/api/content')return Response.json({content:saved});
+ if(url==='/api/admin/content'){saved=JSON.parse(options!.body as string);return Response.json({ok:true});}
+ if(url==='/api/admin/session')return Response.json({ok:true});
+ return Response.json({});
 }));});
 afterEach(()=>{cleanup();vi.unstubAllGlobals();});
 it('adds a vehicle through admin, publishes it and applies custom colours on the public site',async()=>{

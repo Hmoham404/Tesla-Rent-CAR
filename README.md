@@ -1,5 +1,7 @@
 # TESLA Rent Car
 
+Pour la mise en ligne et la correction de l’erreur de connexion Vercel, suivre [DEPLOIEMENT.md](DEPLOIEMENT.md). Ce guide contient les variables de production, le SQL complet et les contrôles après déploiement.
+
 Site de location à Monastir, réalisé avec **Vite, React, TypeScript, Tailwind CSS, Framer Motion** et composants de style shadcn/ui (Radix Dialog, CVA, clsx, tailwind-merge). Accueil clair, accents or et foncés, photographies réelles de Monastir et logo fourni. Le parcours public est traduit en tunisien (ar-TN, RTL), français, anglais, italien et espagnol, avec drapeaux SVG locaux et choix mémorisé. Le dashboard reste en français. Vite a été retenu conformément à la demande ; Next.js n’est pas utilisé.
 
 ## Démarrage

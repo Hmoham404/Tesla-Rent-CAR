@@ -1,8 +1,9 @@
 import {beforeEach,afterEach,expect,it,vi} from 'vitest';
 import {Readable} from 'node:stream';
 import type {IncomingMessage,ServerResponse} from 'node:http';
-import handler from '../api/[...route]';
+import handler from '../server/api-handler';
 import {defaultContent} from '../src/lib/content-model';
+import {readContent} from '../server/content-store';
 
 async function request(url:string,method='GET',body?:unknown,cookie='',origin='https://tesla.test'){
   const req=Object.assign(Readable.from(body?[JSON.stringify(body)]:[]),{url,method,headers:{host:'tesla.test',origin,cookie},socket:{remoteAddress:'test'}});
@@ -52,4 +53,8 @@ it('uploads WebP media to the public bucket through the server',async()=>{
   const bytes=await import('sharp').then(({default:sharp})=>sharp({create:{width:2,height:2,channels:3,background:'#ffffff'}}).webp().toBuffer());
   const r=await request('/api/admin/media','POST',{data:'data:image/webp;base64,'+bytes.toString('base64')},cookie);
   expect(r.status).toBe(201);expect(r.body.url).toMatch(/^https:\/\/database.test\/storage\/v1\/object\/public\/site-media\/.+\.webp$/);expect(upstream).toHaveBeenCalledTimes(1);
+});
+it('reports missing Supabase configuration instead of silently showing demo data in production',async()=>{
+  vi.stubEnv('VITE_DATA_MODE','supabase');vi.stubEnv('SUPABASE_SERVICE_ROLE_KEY','');
+  await expect(readContent()).rejects.toThrow('Supabase non configuré');
 });
