@@ -1,4 +1,4 @@
-import seed from '../data/vehicles.json';
+import seed from '../data/vehicles.json' with { type: 'json' };
 export type Vehicle = typeof seed[number] & { images?: string[]; active?: boolean };
 export type Media = {id:string;url:string;alt:string};
 export type SiteContent = {vehicles:Vehicle[];media:Media[];theme:{light:string;dark:string;logo:string;hero:string}};

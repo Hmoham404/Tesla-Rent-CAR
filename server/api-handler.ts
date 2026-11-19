@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { createHmac, timingSafeEqual, randomUUID } from "node:crypto";
-import {readContent,writeContent,uploadImage} from './content-store';
+import {readContent,writeContent,uploadImage} from './content-store.js';
 import { rentalDays, rentalPeriodDays, quote } from "../src/lib/booking.mjs";
 const equal = (a: string, b: string) => {
   const aa = Buffer.from(a),

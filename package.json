@@ -6,6 +6,7 @@
   "scripts": {
     "prepare:hosting": "node scripts/prepare-hosting.mjs",
     "test:server": "vitest run --config vitest.server.config.ts",
+    "test:runtime": "tsc -p tsconfig.runtime.json && node -e \"import('./.runtime-check/api/admin/login.js').then(m => { if(typeof m.default !== 'function') process.exit(1); console.log('Node ESM API imports OK') })\"",
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",

@@ -1,4 +1,3 @@
-import vehicles from "../data/vehicles.json";
 export type { Vehicle } from './content-model';
 export type Booking = {
   id: string;
@@ -24,7 +23,6 @@ export const whatsapp = (import.meta.env.VITE_WHATSAPP || "").replace(
   /\D/g,
   "",
 );
-export const fleet = vehicles;
 const key = "tesla-bookings-v1";
 export function readBookings(): Booking[] {
   try {

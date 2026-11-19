@@ -1,7 +1,7 @@
 import { mkdir,readFile,writeFile,rename } from 'node:fs/promises';
 import path from 'node:path';
 import { randomUUID } from 'node:crypto';
-import {defaultContent,validateContent,type SiteContent} from '../src/lib/content-model';
+import {defaultContent,validateContent,type SiteContent} from '../src/lib/content-model.js';
 const file=()=>path.join(process.cwd(),'data','site-content.json');
 async function remote(resource:string,init:RequestInit={}){
   const url=process.env.VITE_SUPABASE_URL,key=process.env.SUPABASE_SERVICE_ROLE_KEY;
